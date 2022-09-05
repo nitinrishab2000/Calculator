@@ -1,8 +1,8 @@
-console.log("Hello Javascript");
+// console.log("Hello Javascript");
 const output = document.getElementById("box__top1");
 const clear = document.getElementById("clear");
 clear.addEventListener("click", () => {
-  console.log("Button is clicked!!");
+//   console.log("Button is clicked!!");
   output.innerHTML = "";
   x = "";
   le = -1;
@@ -17,7 +17,7 @@ const equal = document.getElementById("equal");
 equal.addEventListener("click", () => {
  if (output.textContent.length == 0) {
     output.innerHTML = "Error";
-    console.log("error");
+//     console.log("error");
     setTimeout(() => {
       output.innerHTML = "";
       x = "";
@@ -27,7 +27,7 @@ equal.addEventListener("click", () => {
     }, 1000);
   }
   else if(op.length==0){
-    console.log("Text is empty");
+//     console.log("Text is empty");
     output.innerHTML+="";
   }
    else {
@@ -37,7 +37,6 @@ equal.addEventListener("click", () => {
     let n2 = parseInt(st.slice(le));
     if (output.textContent.length == le) {
       output.innerHTML = "Error";
-      console.log("error");
       setTimeout(() => {
         output.innerHTML = "";
         x = "";
@@ -82,7 +81,6 @@ plus.addEventListener("click", () => {
     le = st.length;
     output.innerHTML += "+";
     op = "+";
-    console.log(x);
   }
 });
 
@@ -109,7 +107,6 @@ minus.addEventListener("click", () => {
     output.innerHTML += "-";
     op = "-";
   }
-  // console.log(x);
 });
 
 const multiply = document.getElementById("multiply");
@@ -160,7 +157,6 @@ for (let i = 0; i < 10; i++) {
   let st = numArray[i].textContent;
   numArray[i].addEventListener("click", () => {
     let le = output.textContent.length;
-    console.log(le,x);
     if((op.length==0 && le==19)||(op.length==1 && (le-x.length-1)==19)){
         output.innerHTML = "Number to Long";
         setTimeout(() => {
@@ -175,5 +171,4 @@ for (let i = 0; i < 10; i++) {
         output.innerHTML += st;
       }
   });
-  
 }
